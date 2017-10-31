@@ -1,11 +1,19 @@
 source 'https://rubygems.org/'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'devise'
+gem 'font-awesome-rails'
+gem 'jquery-rails'
 gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
+gem 'sassc-rails'
+gem 'simple_form'
 gem 'uglifier', '>= 1.3.0'
+
 group :development do
+  gem 'guard-livereload', '~> 2.5', require: false
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
