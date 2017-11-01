@@ -7,15 +7,15 @@
 
     <title><%= full_title yield(:title) %></title>
 
-    <%= stylesheet_link_tag    'application', params[:controller], media: 'all' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
   </head>
 
-  <body id="bootstrap-overrides">
+  <body id="bootstrap-overrides" class="<%= controller_name %>">
     <%= render 'layouts/flash' %>
-    <div class="container">
+    <div class="container-fluid">
       <%= yield %>
     </div>
     <%= debug(params) if Rails.env.development? %>
