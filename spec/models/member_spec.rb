@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe Member, type: :model do
   context "first name" do
     it { should validate_presence_of(:first_name) }
     it { should have_valid(:first_name).when('John', 'Sally') }
@@ -21,7 +21,7 @@ RSpec.describe User, type: :model do
 
   context "password" do
     it 'has a matching password confirmation' do
-      user = User.new
+      user = Member.new
       user.password = 'password'
       user.password_confirmation = 'anotherpassword'
 
@@ -35,6 +35,6 @@ RSpec.describe User, type: :model do
   end
 
   context "skills" do
-    
+
   end
 end
