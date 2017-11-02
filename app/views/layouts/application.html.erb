@@ -15,9 +15,9 @@
 
   <body id="bootstrap-overrides" class="<%= controller_name %>">
     <%= render 'layouts/flash' %>
-    <div class="container-fluid">
+    <div class="container-fluid bg-img gradient">
       <%= yield %>
     </div>
-    <%= debug(params) if Rails.env.development? %>
+    <!-- <%= debug(params) if Rails.env.development? %> -->
   </body>
 </html>
