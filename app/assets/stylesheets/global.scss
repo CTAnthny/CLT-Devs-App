@@ -7,72 +7,19 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 /* FONTS */
 
 /* GENERAL */
-// html, body {
-//   // background: #fff;
-//   height: 100%;
-//   width: 100%;
-//   // z-index: 2;
-// }
-//
-// .bg-img {
-//     background-image: asset-data-url("bg-img.jpeg");
-//     background-size: cover;
-//     background-attachment: fixed;
-//     background-position: 0px 0px;
-//     background-repeat: no-repeat;
-//     height: 100%;
-//     width: 100%;
-//     z-index: 0;
-//
-//   .gradient {
-//     position: absolute;
-//     top: 0;
-//   	right: 0;
-//   	bottom: 0;
-//   	left: 0;
-//     z-index: 1;
-//     opacity: .5;
-//     background-size: cover;
-//     -webkit-backface-visibility: hidden;
-//     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3dcdbc+0,2989d8+50,3dcdbc+100 */
-//     background-image: #3dcdbc; /* Old browsers */
-//     background-image: -moz-linear-gradient(-45deg, #3dcdbc 0%, #2989d8 50%, #3dcdbc 100%); /* FF3.6-15 */
-//     background-image: -webkit-linear-gradient(-45deg, #3dcdbc 0%,#2989d8 50%,#3dcdbc 100%); /* Chrome10-25,Safari5.1-6 */
-//     background-image: linear-gradient(135deg, #3dcdbc 0%,#2989d8 50%,#3dcdbc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dcdbc', endColorstr='#3dcdbc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-//   }
-// }
-body {
-  background: #fff;
+html, body {
+  height: 100%;
+  width: 100%;
+  background: rgb(61,205,188);
   background-image: asset-data-url("bg-img.jpeg");
+  background-image: asset-data-url("bg-img.jpeg"), -moz-linear-gradient(-45deg, rgba(61,205,188,.7) 0%, rgba(41,137,216,.7) 50%, rgba(61,205,188,.7) 100%);
+  background-image: asset-data-url("bg-img.jpeg"), -webkit-linear-gradient(-45deg, rgba(61,205,188,.7) 0%,rgba(41,137,216,.7) 50%,rgba(61,205,188,.7) 100%);
+  background-image: linear-gradient(135deg, rgba(61,205,188,.7) 0%,rgba(41,137,216,.7) 50%,rgba(61,205,188,.7) 100%), asset-data-url("bg-img.jpeg");
   background-size: cover;
   background-attachment: fixed;
   background-position: 0px 0px;
   background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-  z-index: 1;
-  .gradient {
-    position: absolute;
-    top: 0;
-  	right: 0;
-  	bottom: 0;
-  	left: 0;
-    z-index: 2;
-    opacity: .5;
-    background-size: cover;
-    -webkit-backface-visibility: hidden;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3dcdbc+0,2989d8+50,3dcdbc+100 */
-    background-image: #3dcdbc; /* Old browsers */
-    background-image: -moz-linear-gradient(-45deg, #3dcdbc 0%, #2989d8 50%, #3dcdbc 100%); /* FF3.6-15 */
-    background-image: -webkit-linear-gradient(-45deg, #3dcdbc 0%,#2989d8 50%,#3dcdbc 100%); /* Chrome10-25,Safari5.1-6 */
-    background-image: linear-gradient(135deg, #3dcdbc 0%,#2989d8 50%,#3dcdbc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dcdbc', endColorstr='#3dcdbc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  }
 }
-
-
 
 /* FIXES */
 
