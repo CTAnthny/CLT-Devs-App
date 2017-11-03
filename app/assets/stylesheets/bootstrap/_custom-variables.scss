@@ -2,13 +2,13 @@
 
 $brand-primary: #33cccc;
 $link-color: $brand-primary;
-$link-hover-color: darken($link-color, 7.5%);
+$link-hover-color: darken($link-color, 10%);
 
     /* Buttons */
 
 $btn-primary-color: #fff; // white
 $btn-primary-bg: $brand-primary;
-$btn-primary-border: darken($brand-primary, 1.5%);
+$btn-primary-border: $brand-primary; // alternative: darken($brand-primary, 1.5%);
 
     /* Forms */
 

@@ -11,8 +11,6 @@ html, body {
   height: 100%;
   width: 100%;
 
-  line-height: 1.5;
-  font-size: 16px;
   color: #848484;
 
   // Background image with gradient
@@ -61,6 +59,7 @@ a:hover {
   /* Forms */
 
 .form-style {
+  font-family: "Open Sans", Arial, sans-serif;
   padding: 30px;
   margin-top: 4em;
   -webkit-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
@@ -68,10 +67,24 @@ a:hover {
   -o-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
   box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
   background: #fff;
+  h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1;
+    padding: 0;
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+.form-inputs {
+  text-transform: uppercase;
 }
 
 .form-style .form-group {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 .form-style .form-group p {
   font-size: 14px;
@@ -89,7 +102,6 @@ a:hover {
 .form-style .form-control {
   font-size: 16px;
   font-weight: 300;
-  height: 50px;
   padding-left: 0;
   padding-right: 0;
   border: none;
@@ -128,6 +140,10 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
+.boolean {
+  text-transform: none;
+}
+
   /* Buttons */
 
 .btn-primary {
@@ -144,7 +160,7 @@ a:hover {
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
-  background: #47d1d1 !important;
+  background: darken($link-color, 5%);
   outline: none;
 }
 
@@ -164,11 +180,11 @@ input, textarea {
 
   /* Bootstrap Focus Glow Override */
 
-#bootstrap-overrides input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus, textarea:focus{
-  border-color: $input-border-focus;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(26, 188, 156, 0.6);
-  outline: 0 none;
-}
+// #bootstrap-overrides input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus, textarea:focus{
+//   border-color: $input-border-focus;
+//   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(26, 188, 156, 0.6);
+//   outline: 0 none;
+// }
 
   /* Extra Alert Classes */
 
