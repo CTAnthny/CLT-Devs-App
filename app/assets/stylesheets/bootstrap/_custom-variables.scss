@@ -1,22 +1,22 @@
   /* General */
 
-// $brand-primary: #1abc9c; // light-green
-// $link-color: $brand-primary;
-// $link-hover-color: lighen($link-color, 7.5%);
-//
-//   /* Buttons */
-//
-// $btn-primary-color: #fff; // white
-// $btn-primary-bg: $brand-primary;
-// $btn-primary-border: darken($brand-primary, 1.5%);
-//
-//   /* Forms */
-//
-// $input-border-focus: $brand-primary;
-// $state-success-text: #268c28; // #3c763d default, saturated 25%
-// $state-warning-text: #bb7a0a; // #8a6d3b default, saturated 50%
-// $state-danger-text: #c62825; // #a94442 default, saturated 25%
-//
-//   /* Products Page */
+$brand-primary: #33cccc;
+$link-color: $brand-primary;
+$link-hover-color: darken($link-color, 7.5%);
+
+    /* Buttons */
+
+$btn-primary-color: #fff; // white
+$btn-primary-bg: $brand-primary;
+$btn-primary-border: darken($brand-primary, 1.5%);
+
+    /* Forms */
+
+$input-border-focus: $brand-primary;
+$state-success-text: #268c28; // #3c763d default, saturated 25%
+$state-warning-text: #bb7a0a; // #8a6d3b default, saturated 50%
+$state-danger-text: #c62825; // #a94442 default, saturated 25%
+
+//   /* Other Pages */
 //
 // $product-link: darken($brand-primary, 3.5%);
