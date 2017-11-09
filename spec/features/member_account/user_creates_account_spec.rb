@@ -18,7 +18,7 @@ feature "user creates account" do
     fill_in 'First Name', with: 'John'
     fill_in 'Last Name', with: 'Smith'
     fill_in 'Email', with: 'user@example.com'
-    fill_in 'user_password', with: 'password'
+    fill_in 'member_password', with: 'password'
     fill_in 'Password Confirmation', with: 'password'
     click_button 'Sign Up'
 
@@ -39,7 +39,7 @@ feature "user creates account" do
     visit root_path
     click_link 'Sign Up'
 
-    fill_in 'user_password', with: 'password'
+    fill_in 'member_password', with: 'password'
     fill_in 'Password Confirmation', with: 'somethingdifferent'
     click_button 'Sign Up'
 

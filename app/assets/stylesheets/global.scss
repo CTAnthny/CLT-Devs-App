@@ -58,6 +58,13 @@ a:hover {
 
   /* Forms */
 
+// disable abbr decoration
+abbr[title] {
+  border: none;
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}
 
 .boolean {
   margin-bottom: 10px !important;
@@ -78,8 +85,8 @@ a:hover {
   }
 }
 
-label {
-  margin-bottom: 0px;
+.help-block {
+  text-transform: none;
 }
 
 .form-style {
@@ -171,6 +178,10 @@ label {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
+label {
+  margin-bottom: 0px;
+}
+
   /* Buttons */
 
 .btn-primary {
@@ -220,6 +231,7 @@ input, textarea {
 }
 
 // Info
+  // $alertinfo-bg: $state-info-bg: #d9edf7 !default; $alert-info-border: $state-info-border: darken(adjust-hue($state-info-bg, -10), 7%) !default; $alert-info-text: $state-info-text: #31708f !default;
 .alert-notice {
   @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
 }
