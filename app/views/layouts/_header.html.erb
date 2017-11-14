@@ -1,0 +1,42 @@
+<header class="header-section">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Responsive Menu -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+        data-target="#collapsibleMenu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to root_path, class: "navbar-brand" do %>CLT Devs<% end %>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="collapsibleMenu">
+        <ul class="nav navbar-nav">
+          <% if member_signed_in? %>
+            <!-- Account Dropdown -->
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user-circle" aria-hidden="true"></i> Account <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><%= link_to 'Edit Account', edit_member_registration_path %></li>
+                <li role="separator" class="divider"></li>
+                <li><%= link_to destroy_member_session_path, method: 'delete' do %>Sign Out <i class="fa fa-sign-out" aria-hidden="true"></i><% end %></li>
+              </ul>
+            </li>
+            <!-- Nav Links -->
+          <% else %>
+            <li><%= link_to new_member_session_path do %><i class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In<% end %></li>
+            <li><%= link_to new_member_registration_path do %>Sign Up <i class="fa fa-sign-in" aria-hidden="true"></i><% end %></li>
+          <% end %>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
