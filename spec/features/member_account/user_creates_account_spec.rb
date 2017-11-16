@@ -1,16 +1,17 @@
 
-feature "user creates account" do
+feature "user creates account:" do
   # As a prospective user
   # I want to create an account
   # So that I can sign up for tasks / projects and view them
 
   # Acceptance Criteria:
-  # [] - From the home page I can click a link to create an account
-  # [] - I am prompted for a valid username, email, password, and pw confirmation
-  # [] - Invalid inputs fail validation, prevent account creation, and present an error message
-  # [] - If I specify valid information, I register my account and am authenticated
-  # [] - On successful account creation I am notified and redirected to the account show page
-  # [] - On successful account creation I am prompted to update profile fields
+  # [X] - From the home page I can click a link to create an account
+  # [X] - I am prompted for a valid username, email, password, and pw confirmation
+  # [X] - Invalid inputs fail validation, prevent account creation, and present an error message
+  # [ ] - Email validation verifies with a regex / concern and (?) shows validation
+  # [X] - If I specify valid information, I register my account and am authenticated
+  # [ ] - On successful account creation I am notified and redirected to the account show page
+  # [ ] - On successful account creation I am prompted to update profile fields
 
   scenario "specifying valid and required information" do
     visit root_path
