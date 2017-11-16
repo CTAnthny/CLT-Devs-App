@@ -14,12 +14,12 @@ feature "member updates account" do
   # So that I can keep my profile up to date
 
   # Acceptance Criteria:
-  # [ ] - I must be signed in and authenticated
-  # [ ] - I am able to reach the edit page from the nav bar
-  # [ ] - I am able to update profile details
-  # [ ] - Invalid field inputs provide error notifications and prevent an update
-  # [ ] - After successful update I am notified and redirected to the account show page
-  # [ ] - An unauthenticated member is redirected when visiting the update url
+  # [X] - I must be signed in and authenticated
+  # [X] - I am able to reach the edit page from the nav bar
+  # [X] - I am able to update profile details
+  # [X] - Invalid field inputs provide error notifications and prevent an update
+  # [X] - After successful update I am notified and redirected to the account show page
+  # [X] - An unauthenticated member is redirected when visiting the update url
 
   scenario "changes account information" do
     click_link 'Edit Account'

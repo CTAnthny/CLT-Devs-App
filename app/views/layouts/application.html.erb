@@ -13,7 +13,7 @@
     <%= render 'layouts/shim' %>
   </head>
 
-  <body id="bootstrap-overrides" class="<%= controller_name %>">
+  <body id="bootstrap-overrides" class="<%= controller_name %> <%= action_name %>">
     <%= render 'layouts/header' if member_signed_in? %>
     <%= render 'layouts/flash' %>
     <div class="container-fluid">
