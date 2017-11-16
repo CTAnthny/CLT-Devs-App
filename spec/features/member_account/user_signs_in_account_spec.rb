@@ -11,13 +11,13 @@ feature "member signs in:" do
   # So that the application can identify me
 
   # Acceptance Criteria:
-  # [ ] - I must be able to sign in from the home page
+  # [X] - I must be able to sign in from the home page
   # [ ] - If I am not signed in and try to access other pages I am redirected to login
-  # [ ] - If I specify a valid, previously registered email and password,
+  # [X] - If I specify a valid, previously registered email and password,
   #    I am authenticated, gain access to the system, and I am notified of success
-  # [ ] - If I specify an invalid email and password, I remain unauthenticated, and
+  # [X] - If I specify an invalid email and password, I remain unauthenticated, and
   #    I am presented with the error(s)
-  # [ ] - If I am already signed in, I can't sign in again
+  # [X] - If I am already signed in, I can't sign in again
 
   scenario "an existing member specifies a valid email and password" do
     fill_in 'Email', with: member.email
