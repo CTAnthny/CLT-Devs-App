@@ -1,17 +1,17 @@
 
-feature "member deletes account" do
+feature "member deletes account:" do
 
   # As an authenticated member
   # I want to delete my account
   # So that my information is no longer retained by the app
 
   # Acceptance Criteria:
-  # [ ] - I must be signed in and authenticated
-  # [ ] - I am able to click a delete account link from the account show page
-  # [ ] - I am provided with a confirmation notice
-  # [ ] - After successful deletion I am notified and redirected to the home page
-  # [ ] - I am unable to delete other users’ accounts
-  # [ ] - After deleting an account the member cannot re-sign in
+  # [X] - I must be signed in and authenticated
+  # [X] - I am able to click a delete account link from the account show page
+  # [X] - I am provided with a confirmation notice
+  # [X] - After successful deletion I am notified and redirected to the home page
+  # [X] - I am unable to delete other users’ accounts
+  # [X] - After deleting an account the member cannot re-sign in
 
   scenario "member must be authenticated to delete account" do
     visit root_path

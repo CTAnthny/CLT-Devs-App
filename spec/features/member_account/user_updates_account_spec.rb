@@ -1,5 +1,5 @@
 
-feature "member updates account" do
+feature "member updates account:" do
   let(:member) { FactoryBot.create(:member) }
 
   before :each do

@@ -1,5 +1,5 @@
 
-feature "member signs out" do
+feature "member signs out:" do
   let(:member) { FactoryBot.create(:member) }
 
   before :each do
