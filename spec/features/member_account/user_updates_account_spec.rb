@@ -32,6 +32,7 @@ feature "member updates account" do
     click_button 'Update'
     expect(page).to have_content('Your account has been updated successfully.')
     expect(page).to have_content('Sign Out')
+    expect(page).to have_current_path(root_path)
   end
 
   scenario "member's current password must be provided to authenticate changes" do

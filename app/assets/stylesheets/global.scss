@@ -6,12 +6,16 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 /* FONTS */
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 /* GENERAL */
 html, body {
   height: 100%;
   width: 100%;
-
-  color: #848484;
+  margin-top: 25px;
+  color: #fff;
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 400;
 
   // Background image with gradient
   background: rgb(61,205,188);
@@ -23,6 +27,12 @@ html, body {
   background-attachment: fixed;
   background-position: 0px 0px;
   background-repeat: no-repeat;
+}
+
+h1, h2, h3, h4, h5, h6, figure {
+  // color: #000;
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 400;
 }
 
 a {
@@ -53,7 +63,37 @@ a:hover {
   padding: 5px;
 }
 .menu li.active a {
-  color: #b3b3b3;
+  color: #17B794;
+}
+
+img {
+  vertical-align: middle;
+}
+
+  /* Nav */
+
+.navbar-default {
+  color: #333;
+  background-color: rgba(255, 255, 255, 1); // default: rgba(248, 248, 248, 1);
+  border: none; // default: border-color: #e7e7e7;
+}
+
+.navbar-brand {
+  color: #333 !important;
+  display: inline-block;
+  img {
+    border: 0;
+    margin-top: -10px;
+    vertical-align: middle;
+  }
+}
+
+.navbar-nav {
+  float: right;
+  color: #333;
+  > li > a {
+    color: #333 !important;
+  }
 }
 
   /* Forms */
@@ -231,7 +271,7 @@ input, textarea {
 }
 
 // Info
-  // $alertinfo-bg: $state-info-bg: #d9edf7 !default; $alert-info-border: $state-info-border: darken(adjust-hue($state-info-bg, -10), 7%) !default; $alert-info-text: $state-info-text: #31708f !default;
+  // $alert-info-bg: $state-info-bg: #d9edf7 !default; $alert-info-border: $state-info-border: darken(adjust-hue($state-info-bg, -10), 7%) !default; $alert-info-text: $state-info-text: #31708f !default;
 .alert-notice {
   @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
 }
