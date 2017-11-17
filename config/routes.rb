@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   # root to dashboard later
   root to: 'main_pages#home'
+
+  resources :projects
 end
