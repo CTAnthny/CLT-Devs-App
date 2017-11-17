@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171117065316) do
+ActiveRecord::Schema.define(version: 20171117073721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 20171117065316) do
     t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
   end
 
+  create_table "project_memberships", id: false, force: :cascade do |t|
+    t.bigint "project_id"
+    t.bigint "member_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_project_memberships_on_member_id"
+    t.index ["project_id"], name: "index_project_memberships_on_project_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -43,4 +52,6 @@ ActiveRecord::Schema.define(version: 20171117065316) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "project_memberships", "members"
+  add_foreign_key "project_memberships", "projects"
 end
