@@ -8,11 +8,11 @@ feature "member adds project:" do
   # So that others can contribute
 
   # Acceptance Criteria:
-  # [ ] - I must be signed in
-  # [ ] - A project title and description is required
-  # [ ] - I am shown errors and the project is not created if validation fails
-  # [ ] - After creating I am directed to the project’s details page
-  # [ ] - If an project with that name is already in the database, I receive an error
+  # [X] - I must be signed in
+  # [X] - A project title and description is required
+  # [X] - I am shown errors and the project is not created if validation fails
+  # [X] - After creating I am directed to the project’s details page
+  # [X] - If an project with that name is already in the database, I receive an error
 
   context "member is authenticated:" do
     before(:each) do
