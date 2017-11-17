@@ -1,0 +1,21 @@
+<%= provide(:title, "project #{@project.name}") %>
+
+<div class="row">
+  <h1><%= @project.name %> </h1>
+</div>
+
+<div class="row">
+  <p>Description: <%= @project.description %> </p>
+</div>
+
+<div class="row">
+  <p>Created By: <%= print_member(@project.creator_id) %> </p>
+</div>
+
+<div class="row">
+  <p>Last Updated At: <%= @project.updated_at %> </p>
+</div>
+
+<%= link_to 'Edit Project', edit_project_path(@project) %>
+<%= link_to 'Delete Project', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'All Projects', projects_path %>

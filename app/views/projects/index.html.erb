@@ -1,0 +1,14 @@
+<%= provide(:title, 'Projects Index') %>
+
+<% @projects.each do |project| %>
+  <div class="project">
+    <h2><%= link_to project.name, project %></h2>
+    <div class="details">
+      <p class="desc"><%= project.description %></p>
+      <span class="creator"><%= print_member(project.creator_id) %></span>
+      <span class="upd_at"><%= project.updated_at %></span>
+    </div>
+  </div>
+<% end %>
+
+<br /><p><%= link_to "Add New Project", new_project_path %></p>

@@ -25,9 +25,8 @@ feature "member adds project:" do
       fill_in 'Name', with: 'build website'
       fill_in 'Description', with: 'it needs to get done!'
       click_button 'Submit'
-      expect(page).to have_content('Your project has been successfully submitted!')
+      expect(page).to have_content('Your project has been successfully created!')
       expect(page).to have_content('it needs to get done!')
-      expect(page).to have_current_path(project_path(project))
     end
 
     scenario "member does not provide project name and description" do
@@ -40,10 +39,11 @@ feature "member adds project:" do
       fill_in 'Name', with: 'build website'
       fill_in 'Description', with: 'it needs to get done!'
       click_button 'Submit'
-      expect(page).to have_content('Your project has been successfully submitted!')
+      expect(page).to have_content('Your project has been successfully created!')
       expect(page).to have_content('it needs to get done!')
 
-      click_link 'Add project'
+      click_link 'All Projects'
+      click_link 'Add New Project'
       fill_in 'Name', with: 'build website'
       fill_in 'Description', with: 'it needs to get done!'
       click_button 'Submit'
