@@ -1,4 +1,3 @@
-require 'pry'
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
@@ -15,6 +14,8 @@ require 'pry'
 #  $ ln -s config/Guardfile .
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
+
+notification :off
 
 guard 'livereload' do
   extensions = {

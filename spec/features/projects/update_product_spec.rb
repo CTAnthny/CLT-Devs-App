@@ -9,10 +9,10 @@ feature "member updates an project" do
   #
   # # Acceptance Criteria:
   # [ ] - I must be logged in and authorized to edit project
-  # [ ] - I am able to edit project details
-  # [ ] - I am presented with errors if I fill out the form incorrectly
-  # [ ] - I can reach the edit page from the details page
-  # [ ] - After editing I am notified and returned to the show page
+  # [X] - I am able to edit project details
+  # [X] - I am presented with errors if I fill out the form incorrectly
+  # [X] - I can reach the edit page from the details page
+  # [X] - After editing I am notified and returned to the show page
   # [ ] - Unauthorized users are unable to edit project details
 
   context "member is authenticated" do
