@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :authenticate_member!
 
   def index
-    @projects = Project.all.order(updated_at: :desc)
+    @projects = Project.all.order(updated_at: :desc).page(params[:page])
   end
 
   def show
@@ -19,6 +19,7 @@ class ProjectsController < ApplicationController
     @project.creator_id = @member.id
 
     if @project.save
+      @member.projects << @project
       flash[:success] = 'Your project has been successfully created!'
       redirect_to @project
     else
