@@ -27,6 +27,21 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+
+    if @project.update_attributes(project_params)
+      flash[:notice] = 'Your project has been successfully updated!'
+      redirect_to @project
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def project_params

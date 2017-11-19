@@ -4,13 +4,19 @@ feature "member views the details of an item" do
   let!(:project) { FactoryBot.create(:project) }
 
   # As an authenticated member
-  # I want to view a list of projects
-  # So that I can pick projects to join
+  # I want to view the details of a project
+  # So that I can get more information about it
 
   # Acceptance Criteria:
-  # [ ] - I must be logged in to view items
-  # [ ] - I must be able to get to this page from the projects index
-  # [ ] - I must be able to see the project name, description, updated_at time, and creator
+  # [X] - I must be signed in
+  # [X] - I must be able to get to this page from the projects index
+  # [X] - I must be able to see the project name, description, updated_at time, and creator
+  # [ ] - I must be able to view the project's git url
+  # [ ] - I must be able to view the current members working on the project
+  # [ ] - I must be able to view the project's tasks and associated members
+  # [ ] - I must be able to view proposed deadlines
+  # [ ] - I must be able to view a project's keywords and "desired" categories
+  # [ ] - I am able to go back to the all projects index page
 
   context "member is authenticated" do
     before(:each) do

@@ -1,0 +1,10 @@
+<%= provide(:title, 'Edit Project') %>
+
+<h1>Edit Project</h1>
+<div class="row">
+  <%= render 'form' %>
+</div>
+
+<span><%= link_to 'Back', @project %></span>
+<span><%= link_to 'Delete Item', @project, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+<span><%= link_to 'All Projects', @projects %></span>

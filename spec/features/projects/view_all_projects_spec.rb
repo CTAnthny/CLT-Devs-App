@@ -9,10 +9,10 @@ feature "member views all projects" do
   # So that I can pick projects to join
   #
   # Acceptance Criteria:
-  # [ ] - I must be logged in to view projects
-  # [ ] - I must be able to see the project name, description, and creator
-  # [ ] - I must see projects listed in order, most recently updated first
-  # [ ] - I must be able to page view projects
+  # [X] - I must be logged in to view projects
+  # [X] - I must be able to see the project name, description, and creator
+  # [X] - I must see projects listed in order, most recently updated first
+  # [X] - I must be able to page view projects
 
   context "member is authenticated" do
     before(:each) do
