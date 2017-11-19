@@ -1,7 +1,7 @@
 
 feature "member views the details of an item" do
   let(:member) { FactoryBot.create(:member) }
-  let!(:project) { FactoryBot.create(:project, creator_id: member.id) }
+  let!(:project) { FactoryBot.create(:project) }
 
   # As an authenticated member
   # I want to view a list of projects

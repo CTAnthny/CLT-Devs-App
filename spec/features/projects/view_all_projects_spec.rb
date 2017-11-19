@@ -1,8 +1,8 @@
 
 feature "member views all projects" do
-  let!(:member) { FactoryBot.create(:member) }
-  before(:all) { 25.times { FactoryBot.create(:project, creator_id: member.id) } }
-  after(:all) { Project.delete_all; member.delete_all }
+  let(:member) { FactoryBot.create(:member) }
+  before(:all) { 25.times { FactoryBot.create(:project) } }
+  after(:all) { Project.delete_all }
 
   # As an authenticated member
   # I want to view a list of projects
@@ -34,7 +34,7 @@ feature "member views all projects" do
     end
 
     scenario "member is able to paginate projects" do
-      expect(page).to have_selector('ul.pagination')
+      expect(page).to have_selector('nav.pagination')
 
       Project.page(2).each do |project|
         expect(page).to have_selector('div.project', text: project.name)

@@ -9,6 +9,11 @@ FactoryBot.define do
   factory :project do
     sequence(:name) { |n| "Project#{n}" }
     description "MyText"
+
+    before(:create) do |project|
+      member = Member.last || FactoryBot.create(:member)
+      project.creator_id = member.id
+    end
   end
 
   factory :project_membership do
