@@ -32,6 +32,21 @@ body.projects {
     }
   }
 
+  .project-form-links {
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    a {
+      color: #555;
+      &:hover, &:active {
+        color: $link-hover-color;
+      }
+    }
+    span.break {
+      color: #9f9f9f;
+      padding: 0px 3px;
+    }
+  }
+
   .projects {
     display: block;
   }
@@ -45,6 +60,7 @@ body.projects {
     }
   }
 
+  // Index page title styling
   .project-title {
     font-size: 2em;
     margin-top: 0.15em;
@@ -53,19 +69,43 @@ body.projects {
     padding-top: 1.5em;
   }
 
-  .project-desc {
-      color: $primary-color;
-      font-size: 1.5em;
-      line-height: 1.8em;
-      margin-top: -0.1em;
-      padding-left: 1.35em;
+  // Show page title styling
+  .project-name {
+    border-bottom: 1px solid #ddd;
   }
 
+  // Index page description styling
+  .project-desc {
+    color: $primary-color;
+    font-size: 1.5em;
+    line-height: 1.8em;
+    margin-top: -0.1em;
+    padding-left: 1.35em;
+  }
+
+  // Show page description styling
+  .project-info {
+    color: $primary-color;
+    font-size: 1.75em;
+    line-height: 1.8em;
+    margin-top: -0.5em;
+    padding-left: .5em;
+  }
+
+  // Index page meta styling
   .project-meta {
-      color: $secondary-color;
-      font-size: 90%;
-      margin: 0;
-      padding-left: 2.75em;
+    color: $secondary-color;
+    font-size: 90%;
+    margin: 0;
+    padding-left: 2.75em;
+  }
+
+  // Show page details styling
+  .project-details {
+    color: $secondary-color;
+    font-size: 90%;
+    margin: 0;
+    padding: 1.75em 2.75em;
   }
 
   .project-category {
