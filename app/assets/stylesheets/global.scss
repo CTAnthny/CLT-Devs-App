@@ -280,7 +280,6 @@ input, textarea {
 }
 
 // Info
-  // $alert-info-bg: $state-info-bg: #d9edf7 !default; $alert-info-border: $state-info-border: darken(adjust-hue($state-info-bg, -10), 7%) !default; $alert-info-text: $state-info-text: #31708f !default;
 .alert-notice {
   @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
 }

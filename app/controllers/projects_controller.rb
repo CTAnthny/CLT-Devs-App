@@ -44,6 +44,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project = Project.find(params[:id])
+    @project.project_memberships.clear
     @project.destroy
     flash[:notice] = 'Your project has been successfully deleted!'
     redirect_to projects_path

@@ -17,6 +17,9 @@ $state-success-text: #268c28; // #3c763d default, saturated 25%
 $state-warning-text: #bb7a0a; // #8a6d3b default, saturated 50%
 $state-danger-text: #c62825; // #a94442 default, saturated 25%
 
-//   /* Other Pages */
-//
-// $product-link: darken($brand-primary, 3.5%);
+   /* Alerts */
+
+  // alert-*-*: state-*-*
+$alert-info-bg: #afd9ee; // #d9edf7 default, darkened 10%
+$alert-info-text: #379; // #31708f default, lightened and saturated
+// $alert-info-border: darken(adjust-hue($state-info-bg, -10), 7%); // default
