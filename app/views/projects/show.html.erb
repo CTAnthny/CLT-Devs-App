@@ -7,7 +7,7 @@
     <p class="project-details">
       <span class="creator">Created By: <%= print_member(@project.creator_id) %></span>
       <!-- <a class="project-category" href="#"></a> -->
-      <br /><span class="upd_at">Last Updated: <%= @project.updated_at %></span>
+      <br /><span class="upd_at">Last Updated: <%= @project.updated_at.to_formatted_s(:long) %></span>
     </p>
   </header>
   <dd class="project-info">

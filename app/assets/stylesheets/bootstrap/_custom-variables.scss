@@ -18,8 +18,17 @@ $state-warning-text: #bb7a0a; // #8a6d3b default, saturated 50%
 $state-danger-text: #c62825; // #a94442 default, saturated 25%
 
    /* Alerts */
-
   // alert-*-*: state-*-*
+
+$state-success-bg: #cee8c4; // #dff0d8 default, darkened 5%
+// $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+
 $alert-info-bg: #afd9ee; // #d9edf7 default, darkened 10%
 $alert-info-text: #379; // #31708f default, lightened and saturated
 // $alert-info-border: darken(adjust-hue($state-info-bg, -10), 7%); // default
+
+$state-warning-bg: #faf2cc; // #fcf8e3 default, darkened 5%
+// $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-bg: #e9c8c8; // #f2dede default, darkened 6%
+// $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
