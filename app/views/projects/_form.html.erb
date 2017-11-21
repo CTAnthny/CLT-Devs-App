@@ -1,5 +1,7 @@
 <%= simple_form_for @project do |f| %>
+  <h2><%= @header %></h2>
   <%= render 'shared/error_messages', object: @project %>
+
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.button :submit, "Submit" %>

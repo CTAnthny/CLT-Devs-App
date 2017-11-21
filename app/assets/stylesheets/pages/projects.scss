@@ -6,7 +6,11 @@ body.projects {
   padding: 0em 7.5em;
 
   a {
-    color: #fff;
+    color: white;
+    text-decoration: none;
+    &:hover, &:active {
+      color: lighten(black, 37.5%);
+    }
   }
 
   h1 {
@@ -15,6 +19,17 @@ body.projects {
     text-transform: uppercase;
     color: $primary-color;
     letter-spacing: 0.1em;
+  }
+
+  .btn-default {
+    color: white;
+    background-color: darken($brand-primary, 4%);
+    border-color: darken($brand-primary, 3%);
+    &:hover, &:active {
+      color: white;
+      background-color: darken($brand-primary, 7.5%);
+      border-color: darken($brand-primary, 10%);
+    }
   }
 
   .projects {
@@ -80,7 +95,7 @@ body.projects {
   .project-image-meta {
       margin-top: -3.5em;
       margin-left: 1em;
-      color: #fff;
+      color: white;
       text-shadow: 0 1px 1px #333;
   }
 

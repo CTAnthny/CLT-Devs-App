@@ -1,6 +1,7 @@
 <%= provide(:title, 'New Project') %>
 
-<h1>Add Project</h1>
+<% @header = capture do %>Add Project<% end %>
+
 <div class="row">
   <%= render 'form' %>
 </div>
