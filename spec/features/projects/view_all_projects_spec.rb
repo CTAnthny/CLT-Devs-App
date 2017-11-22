@@ -23,21 +23,21 @@ feature "member views all projects" do
     scenario "member views projects with details" do
       expect(page).to have_content("#{Project.last.name}")
       expect(page).to have_content("#{Project.last.description}")
-      expect(page).to have_content("#{Project.last.updated_at}")
+      expect(page).to have_content("#{Project.last.updated_at.to_formatted_s(:long)}")
       expect(page).to have_content('John Smith')
     end
 
     scenario "member views project in correct order" do
-      content = first('div.details span.upd_at').text
+      content = first('section.project header p span.upd_at').text
       last_upd_project = Project.last
-      expect(content).to eq(last_upd_project.updated_at.to_s)
+      expect(content).to eq("Last Updated: #{last_upd_project.updated_at.to_formatted_s(:long)}")
     end
 
     scenario "member is able to paginate projects" do
       expect(page).to have_selector('nav.pagination')
 
       Project.page(2).each do |project|
-        expect(page).to have_selector('div.project', text: project.name)
+        expect(page).to have_selector('h2.project-title a', text: project.name)
       end
     end
   end

@@ -28,9 +28,9 @@ feature "member views the details of an item" do
       click_link "#{project.name}"
       expect(page).to have_current_path(project_path(project))
       expect(page).to have_content("#{project.name}")
-      expect(page).to have_content("Description: #{project.description}")
+      expect(page).to have_content("#{project.description}")
       expect(page).to have_content("Created By: John Smith")
-      expect(page).to have_content("Last Updated At: #{project.updated_at}")
+      expect(page).to have_content("Last Updated: #{project.updated_at.to_formatted_s(:long)}")
     end
 
     scenario "member views item rating and comments"
