@@ -9,6 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 /* GENERAL */
+
 html, body {
   height: 100%;
   width: 100%;
@@ -30,7 +31,6 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6, figure {
-  // color: #000;
   font-family: "Raleway", Arial, sans-serif;
   font-weight: 400;
 }
@@ -221,6 +221,20 @@ abbr[title] {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
+.devise-links {
+  margin: 1.5em 0em;
+  // a {
+  //   color: #555;
+  //   &:hover, &:active {
+  //     color: $link-hover-color;
+  //   }
+  // }
+  span.break {
+    color: #9f9f9f;
+    padding: 0px 3px;
+  }
+}
+
 label {
   margin-bottom: 0px;
 }
@@ -262,7 +276,21 @@ input, textarea {
   opacity: 0;
 }
 
-/* FIXES */
+  /* Alert Classes */
+
+.alert {
+text-align: center;
+}
+
+// Danger
+.alert-alert {
+@include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+}
+
+// Info
+.alert-notice {
+@include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
+}
 
   /* Bootstrap Focus Glow Override */
 
@@ -271,18 +299,6 @@ input, textarea {
 //   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(26, 188, 156, 0.6);
 //   outline: 0 none;
 // }
-
-  /* Extra Alert Classes */
-
-// Danger
-.alert-alert {
-  @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
-}
-
-// Info
-.alert-notice {
-  @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
-}
 
 /* HEADER */
 

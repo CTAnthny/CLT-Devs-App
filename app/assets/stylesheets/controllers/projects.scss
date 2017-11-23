@@ -39,12 +39,12 @@ body.projects {
   .project-form-links {
     margin-top: 2em;
     margin-bottom: 1.5em;
-    a {
-      color: #555;
-      &:hover, &:active {
-        color: $link-hover-color;
-      }
-    }
+    // a {
+    //   color: #555;
+    //   &:hover, &:active {
+    //     color: $link-hover-color;
+    //   }
+    // }
     span.break {
       color: #9f9f9f;
       padding: 0px 3px;
