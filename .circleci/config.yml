@@ -1,7 +1,5 @@
 version: 2
-machine:
-  ruby:
-    version: ruby 2.4.2p198
+
 deployment:
   staging:
     branch: master
@@ -16,6 +14,9 @@ jobs:
   build:
     parallelism: 3
     working_directory: ~/circleci-la-fproject
+    machine:
+      ruby:
+        version: ruby 2.4.2p198
     # docker:
     #   - image: circleci/ruby:2.4-node
     #     environment:
