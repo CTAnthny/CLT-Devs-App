@@ -2,4 +2,7 @@
 
 <h1>Welcome!</h1>
 
-<h2><%= link_to 'Add Project', new_project_path %></h2>
+<div class="btn-group" role="group">
+  <%= link_to 'All Projects', projects_path, class: "btn btn-default" %>
+  <%= link_to "Add New Project", new_project_path, class: "btn btn-default" %>
+</div>

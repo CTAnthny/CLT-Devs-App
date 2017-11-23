@@ -32,6 +32,12 @@ body.projects {
     }
   }
 
+  ul.dropdown-menu {
+    a {
+      color: #333;
+    }
+  }
+
   .form-style {
     margin-top: 15%;
   }
@@ -39,12 +45,12 @@ body.projects {
   .project-form-links {
     margin-top: 2em;
     margin-bottom: 1.5em;
-    // a {
-    //   color: #555;
-    //   &:hover, &:active {
-    //     color: $link-hover-color;
-    //   }
-    // }
+    a {
+      color: $brand-primary;
+      &:hover, &:active {
+        color: $link-hover-color;
+      }
+    }
     span.break {
       color: #9f9f9f;
       padding: 0px 3px;

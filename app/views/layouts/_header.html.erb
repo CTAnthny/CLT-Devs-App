@@ -23,7 +23,7 @@
               aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-user-circle" aria-hidden="true"></i> Account <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Profile</a></li>
+                <li><%= link_to 'Profile', root_path %></li>
                 <li><%= link_to 'Edit Account', edit_member_registration_path %></li>
                 <li role="separator" class="divider"></li>
                 <li><%= link_to destroy_member_session_path, method: 'delete' do %>Sign Out <i class="fa fa-sign-out" aria-hidden="true"></i><% end %></li>

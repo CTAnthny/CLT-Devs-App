@@ -4,20 +4,20 @@ $brand-primary: #33cccc;
 $link-color: $brand-primary;
 $link-hover-color: darken($link-color, 10%);
 
-    /* Buttons */
+  /* Buttons */
 
 $btn-primary-color: #fff; // white
 $btn-primary-bg: $brand-primary;
 $btn-primary-border: $brand-primary; // alternative: darken($brand-primary, 1.5%);
 
-    /* Forms */
+  /* Forms */
 
 $input-border-focus: $brand-primary;
 $state-success-text: #268c28; // #3c763d default, saturated 25%
 $state-warning-text: #bb7a0a; // #8a6d3b default, saturated 50%
 $state-danger-text: #c62825; // #a94442 default, saturated 25%
 
-   /* Alerts */
+  /* Alerts */
   // alert-*-*: state-*-*
 
 $state-success-bg: #cee8c4; // #dff0d8 default, darkened 5%
@@ -32,3 +32,19 @@ $state-warning-bg: #faf2cc; // #fcf8e3 default, darkened 5%
 
 $state-danger-bg: #e9c8c8; // #f2dede default, darkened 6%
 // $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+  /* Nav */
+
+$navbar-default-link-color: #333 !default; // #777 !default;
+$navbar-default-link-active-color: darken($brand-primary, 5%) !default; // #555 !default
+$navbar-default-link-hover-color: darken($brand-primary, 5%) !default;
+// $navbar-default-bg: #fff !default;
+$navbar-default-link-active-bg: #fff !default; // darken($navbar-default-bg, 6.5%) !default
+
+// $nav-link-hover-bg: #fff !default; //$gray-lighter !default
+$nav-tabs-active-link-hover-color: darken($brand-primary, 5%) !default;
+// $nav-tabs-active-link-hover-bg: #fff !default;
+
+$dropdown-link-active-color: darken($brand-primary, 5%) !default;
+$dropdown-link-hover-color: darken($brand-primary, 5%) !default; // darken($gray-dark, 5%) default
+$dropdown-link-hover-bg: #fff !default; // #f5f5f5 !default
