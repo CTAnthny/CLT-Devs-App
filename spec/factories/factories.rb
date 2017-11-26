@@ -17,15 +17,20 @@ FactoryBot.define do
     end
   end
 
-  factory :project_membership do
-    member
-    project
-  end
-
   factory :task do
     sequence(:name) { |n| "Task#{n}" }
     sequence(:description) { |n| "TaskDescriptionText#{n}" }
     keywords Faker::Lovecraft.words
     needs Faker::RickAndMorty.quote
+  end
+
+  factory :project_membership do
+    member
+    project
+  end
+
+  factory :task_membership do
+    member
+    task
   end
 end
