@@ -18,7 +18,7 @@ feature "member adds project:" do
     before(:each) do
       sign_in(member)
       visit root_path
-      click_link('Add Project')
+      click_link('Add New Project')
     end
 
     scenario "member properly fills out the form and submits a project" do
