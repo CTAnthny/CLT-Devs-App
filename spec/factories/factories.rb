@@ -8,7 +8,8 @@ FactoryBot.define do
 
   factory :project do
     sequence(:name) { |n| "Project#{n}" }
-    description "MyText"
+    sequence(:description) { |n| "ProjectDescriptionText#{n}" }
+    sequence(:updated_at) { |n| Time.now + n }
 
     before(:create) do |project|
       member = Member.last || FactoryBot.create(:member)
@@ -19,5 +20,12 @@ FactoryBot.define do
   factory :project_membership do
     member
     project
+  end
+
+  factory :task do
+    sequence(:name) { |n| "Task#{n}" }
+    sequence(:description) { |n| "TaskDescriptionText#{n}" }
+    keywords Faker::Lovecraft.words
+    needs Faker::RickAndMorty.quote
   end
 end

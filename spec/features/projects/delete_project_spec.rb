@@ -8,11 +8,11 @@ feature "member deletes an project" do
   # So that no one can view it
   #
   # # Acceptance Criteria:
-  #  [ ] - I must be logged in and authorized to delete projects
-  #  [ ] - I must be able to delete a project from the edit page
-  #  [ ] - I must be able to delete a project from the details page
+  #  [X] - I must be logged in and authorized to delete projects
+  #  [X] - I must be able to delete a project from the edit page
+  #  [X] - I must be able to delete a project from the details page
   #  [ ] - All tasks associated with the project must also be deleted
-  #  [ ] - After deleting I am notified and returned to the index page
+  #  [X] - After deleting I am notified and returned to the index page
   #  [ ] - Unauthorized members are unable to delete projects
 
   context "member is authenticated" do

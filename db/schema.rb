@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171117103854) do
+ActiveRecord::Schema.define(version: 20171126135656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,26 @@ ActiveRecord::Schema.define(version: 20171117103854) do
     t.integer "creator_id", null: false
   end
 
+  create_table "task_memberships", id: false, force: :cascade do |t|
+    t.bigint "task_id"
+    t.bigint "member_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_task_memberships_on_member_id"
+    t.index ["task_id"], name: "index_task_memberships_on_task_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description", null: false
+    t.text "keywords"
+    t.text "needs"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "project_memberships", "members"
   add_foreign_key "project_memberships", "projects"
+  add_foreign_key "task_memberships", "members"
+  add_foreign_key "task_memberships", "tasks"
 end

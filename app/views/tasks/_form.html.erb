@@ -1,0 +1,16 @@
+<%= simple_form_for [@project, @task],
+  html: { class: "col-md-6 col-md-offset-3 form-style animate-box fadeIn animated-fast" } do |f| %>
+
+  <h2><%= @header %></h2>
+  <%= render 'shared/error_messages', object: @project %>
+  <%= render 'shared/error_messages', object: @task %>
+
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :keywords %>
+  <%= f.input :needs %>
+
+  <%= render "links" %>
+
+  <%= f.button :submit, "Create Task" %>
+<% end %>
