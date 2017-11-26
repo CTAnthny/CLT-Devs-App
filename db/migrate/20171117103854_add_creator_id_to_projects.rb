@@ -1,5 +1,7 @@
 class AddCreatorIdToProjects < ActiveRecord::Migration[5.1]
   def change
-    add_column :projects, :creator_id, :integer, null: false
+    change_table :projects do |t|
+      t.integer :creator_id, null: false
+    end
   end
 end

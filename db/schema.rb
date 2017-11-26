@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171126135656) do
+ActiveRecord::Schema.define(version: 20171126165132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,11 +46,12 @@ ActiveRecord::Schema.define(version: 20171126135656) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
+    t.string "name", null: false
+    t.text "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "creator_id", null: false
+    t.index ["creator_id"], name: "index_projects_on_creator_id"
   end
 
   create_table "task_memberships", id: false, force: :cascade do |t|
@@ -63,16 +64,19 @@ ActiveRecord::Schema.define(version: 20171126135656) do
   end
 
   create_table "tasks", force: :cascade do |t|
+    t.bigint "project_id"
     t.string "name", null: false
     t.text "description", null: false
     t.text "keywords"
     t.text "needs"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_tasks_on_project_id", unique: true
   end
 
   add_foreign_key "project_memberships", "members"
   add_foreign_key "project_memberships", "projects"
   add_foreign_key "task_memberships", "members"
   add_foreign_key "task_memberships", "tasks"
+  add_foreign_key "tasks", "projects"
 end

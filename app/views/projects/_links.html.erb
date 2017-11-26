@@ -21,7 +21,7 @@
     <%= link_to 'All Projects', projects_path, class: "btn btn-default" %>
     <%= link_to 'Edit Project', edit_project_path(@project), class: "btn btn-default" %>
     <%= link_to 'Delete Project', @project, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
-    <%= link_to 'Add New Task', new_task_path, class: "btn btn-default" %>
+    <%= link_to 'Add New Task', new_project_task_path(@project), class: "btn btn-default" %>
   </div>
 <% end %>
 
