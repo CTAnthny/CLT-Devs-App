@@ -1,4 +1,4 @@
-<%= provide(:title, "project #{@project.name}") %>
+<%= provide(:title, "Project: #{@project.name}") %>
 
 <section class="project">
   <header class="project-header">
@@ -19,9 +19,9 @@
   <% @tasks.each do |task| %>
     <section class="task">
       <header class="task-header">
-        <dt><h2 class="task-name"><%= task.name %></h2></dt>
+        <dt><h2 class="task-name"><%= link_to task.name, [@project, task] %></h2></dt>
         <p class="task-details">
-          <span class="upd_at">Last Updated: <%= @project.updated_at.to_formatted_s(:long) %></span><br />
+          <span class="upd_at">Last Updated: <%= task.updated_at.to_formatted_s(:long) %></span><br />
           <span class="task-members"></span>
         </p>
       </header>

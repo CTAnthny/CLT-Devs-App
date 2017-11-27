@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @tasks = @project.tasks
+    @tasks = @project.tasks.order(updated_at: :desc).page(params[:page])
   end
 
   def new

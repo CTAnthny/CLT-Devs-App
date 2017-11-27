@@ -5,4 +5,6 @@ class Task < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true, length: { in: 3..75 }
   validates :description, presence: true, length: { maximum: 1000 }
+
+  paginates_per 10
 end

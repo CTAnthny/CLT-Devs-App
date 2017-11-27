@@ -1,4 +1,10 @@
 class TasksController < ApplicationController
+  before_action :authenticate_member!
+
+  def show
+    @project = Project.find(params[:project_id])
+    @task = Task.find(params[:id])
+  end
 
   def new
     @project = Project.find(params[:project_id])

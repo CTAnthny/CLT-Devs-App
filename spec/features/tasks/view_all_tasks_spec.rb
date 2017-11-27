@@ -10,10 +10,10 @@ feature "member views all tasks" do
   # So that I know what is being done on a project
   #
   # Acceptance Criteria:
-  #  [ ] - I must be signed in
+  #  [X] - I must be signed in
   #  [ ] - I must be on the project detail page and see only the tasks for that project
-  #  [ ] - I am able to view a listing of all open tasks by title and description
-  #  [ ] - Tasks are listed in order, most recent first
+  #  [X] - I am able to view a listing of all open tasks by title and description
+  #  [X] - Tasks are listed in order, most recent first
   #  [ ] - I am able to view task keywords, needs, and member assignments
 
   context "member is authenticated" do

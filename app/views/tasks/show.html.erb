@@ -1,0 +1,16 @@
+<%= provide(:title, "Task: #{@task.name}") %>
+
+<section class="task">
+  <header class="task-header">
+    <dt><h2 class="task-name"><%= @task.name %></h2></dt>
+    <p class="task-details">
+      <span class="upd_at">Last Updated: <%= @task.updated_at.to_formatted_s(:long) %></span><br />
+      <span class="task-members"></span>
+    </p>
+  </header>
+  <section class="task-info">
+    <dd><%= @task.description %></dd>
+    <dd><%= @task.keywords %></dd>
+    <dd><%= @task.needs %></dd>
+  </section>
+</section>
