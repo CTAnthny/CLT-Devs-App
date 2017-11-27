@@ -8,12 +8,12 @@ feature "member reviews item" do
   # So that others can view it
   #
   # Acceptance Criteria:
-  #  [ ] - I must be signed in to create a task
-  #  [ ] - I must be on the project detail page
-  #  [ ] - A task title and description is required
-  #  [ ] - Task deadline, keywords, needs, and member assignments are optional
-  #  [ ] - I am presented with errors and the task is not created if I fill out the form incorrectly
-  #  [ ] - Member is redirected to project detail page after creation
+  #  [X] - I must be signed in to create a task
+  #  [X] - I must be on the project detail page
+  #  [X] - A task title and description is required
+  #  [X] - Task deadline, keywords, needs, and member assignments are optional
+  #  [X] - I am presented with errors and the task is not created if I fill out the form incorrectly
+  #  [X] - Member is redirected to project detail page after creation
 
   context "member is authenticated" do
     before(:each) do

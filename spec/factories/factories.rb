@@ -15,6 +15,16 @@ FactoryBot.define do
       member = Member.last || FactoryBot.create(:member)
       project.creator_id = member.id
     end
+
+    factory :project_with_tasks do
+      transient do
+        tasks_count 3
+      end
+
+      after(:create) do |project, evaluator|
+        create_list(:task, evaluator.tasks_count, project: project)
+      end
+    end
   end
 
   factory :task do
@@ -22,6 +32,7 @@ FactoryBot.define do
     sequence(:description) { |n| "TaskDescriptionText#{n}" }
     keywords Faker::Lovecraft.words
     needs Faker::RickAndMorty.quote
+    sequence(:updated_at) { |n| Time.now + n }
   end
 
   factory :project_membership do
