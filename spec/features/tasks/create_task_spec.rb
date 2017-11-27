@@ -26,22 +26,22 @@ feature "member reviews item" do
     scenario "member visits project detail page and successfully creates task" do
       description = "Lorem Ipsum is the industry's standard dummy text."
       fill_in "Description", with: description
-      fill_in "Title", with: "Create Navbar"
+      fill_in "Name", with: "Create Navbar"
       click_button "Create Task"
 
       expect(page).to have_current_path(project_path(project))
-      expect(page).to have_content("Your task was successfully created!")
+      expect(page).to have_content("Your task has been successfully created!")
       expect(page).to have_content("Create Navbar")
       expect(page).to have_content(description)
     end
 
     scenario "member submits invalid information" do
-      fill_in "Title", with: ""
+      fill_in "Name", with: ""
       fill_in "Description", with: ""
       click_button "Create Task"
-      expect(page).to_not have_content("Your task was successfully created!")
-      expect(page).to have_content("Title can't be blank")
-      expect(page).to have_content("Description can't be blank and Description is too short (minimum is 10 characters)")
+      expect(page).to_not have_content("Your task has been successfully created!")
+      expect(page).to have_content("Namecan't be blank and is too short (minimum is 3 characters)")
+      expect(page).to have_content("Description can't be blank")
     end
   end
 
