@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-  belongs_to :projects
+  belongs_to :project
   has_many :task_memberships
   has_many :members, through: :task_memberships
 
