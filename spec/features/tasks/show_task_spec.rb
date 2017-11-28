@@ -9,9 +9,9 @@ feature "member views all tasks" do
   # So that I can get more information about it
   #
   # Acceptance Criteria:
-  #  [ ] - I must be signed in
-  #  [ ] - I am able to reach the task show page from the project detail page
-  #  [ ] - I am able to view the task's title and description
+  #  [X] - I must be signed in
+  #  [X] - I am able to reach the task show page from the project detail page
+  #  [X] - I am able to view the task's title and description
   #  [ ] - I am able to view the members currently working on the task
   #  [ ] - I am able to view task keywords, needs, and proposed deadline
   #  [ ] - I am able to view task issues

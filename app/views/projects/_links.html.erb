@@ -1,10 +1,16 @@
-<!-- edit -->
+<!-- index -->
+<% if current_page?(action: 'index') %>
+  <br /><%= link_to "Add New Project", new_project_path, class: "btn btn-default" %>
+<% end %>
+
+<!-- show -->
 <!-- Necessary for models that are built but not saved in the controller -->
-<% if @project && !@project.id.nil? && current_page?(action: 'edit') %>
-  <div class="project-form-links">
-    <span><%= link_to 'Back', @project %><span class="break"> | </span></span>
-    <span><%= link_to 'All Projects', projects_path %><span class="break"> | </span></span>
-    <span><%= link_to 'Delete Project', @project, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+<% if @project && !@project.id.nil? && current_page?(action: 'show') %>
+  <div class="btn-group" role="group">
+    <%= link_to 'All Projects', projects_path, class: "btn btn-default" %>
+    <%= link_to 'Edit Project', edit_project_path(@project), class: "btn btn-default" %>
+    <%= link_to 'Delete Project', @project, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Add New Task', new_project_task_path(@project), class: "btn btn-default" %>
   </div>
 <% end %>
 
@@ -15,17 +21,11 @@
   </div>
 <% end %>
 
-<!-- show -->
-<% if @project && !@project.id.nil? && current_page?(action: 'show') %>
-  <div class="btn-group" role="group">
-    <%= link_to 'All Projects', projects_path, class: "btn btn-default" %>
-    <%= link_to 'Edit Project', edit_project_path(@project), class: "btn btn-default" %>
-    <%= link_to 'Delete Project', @project, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
-    <%= link_to 'Add New Task', new_project_task_path(@project), class: "btn btn-default" %>
+<!-- edit -->
+<% if @project && !@project.id.nil? && current_page?(action: 'edit') %>
+  <div class="project-form-links">
+    <span><%= link_to 'Back', @project %><span class="break"> | </span></span>
+    <span><%= link_to 'All Projects', projects_path %><span class="break"> | </span></span>
+    <span><%= link_to 'Delete Project', @project, method: :delete, data: { confirm: 'Are you sure?' } %></span>
   </div>
-<% end %>
-
-<!-- index -->
-<% if current_page?(action: 'index') %>
-  <br /><%= link_to "Add New Project", new_project_path, class: "btn btn-default" %>
 <% end %>

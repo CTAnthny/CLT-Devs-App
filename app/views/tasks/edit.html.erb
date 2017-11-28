@@ -1,0 +1,7 @@
+<%= provide(:title, "Edit Task: #{@task.name}") %>
+
+<% @header = capture do %>Edit Task<% end %>
+
+<div class="row">
+  <%= render 'form' %>
+</div>
