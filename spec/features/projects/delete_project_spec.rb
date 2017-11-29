@@ -1,5 +1,5 @@
 
-feature "member deletes an project" do
+feature "member deletes an project:" do
   let!(:member) { FactoryBot.create(:member) }
   let!(:project) { FactoryBot.create(:project) }
 
@@ -15,7 +15,7 @@ feature "member deletes an project" do
   #  [X] - After deleting I am notified and returned to the index page
   #  [ ] - Unauthorized members are unable to delete projects
 
-  context "member is authenticated" do
+  context "member is authenticated:" do
     before(:each) do
       sign_in(member)
       visit projects_path
@@ -46,7 +46,7 @@ feature "member deletes an project" do
     scenario "all tasks associated with the project are deleted"
   end
 
-  context "member is not authenticated" do
+  context "member is not authenticated:" do
     scenario "member cannot delete projects"
   end
 end

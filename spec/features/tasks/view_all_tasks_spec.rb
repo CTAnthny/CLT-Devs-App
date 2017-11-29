@@ -1,5 +1,5 @@
 
-feature "member views all tasks" do
+feature "member views all tasks:" do
   let(:member) { FactoryBot.create(:member) }
   let!(:project) { FactoryBot.create(:project_with_tasks) }
   let(:first_task) { project.tasks.first }
@@ -16,7 +16,7 @@ feature "member views all tasks" do
   #  [X] - Tasks are listed in order, most recent first
   #  [ ] - I am able to view task keywords, needs, and member assignments
 
-  context "member is authenticated" do
+  context "member is authenticated:" do
     before(:each) do
       sign_in(member)
       visit projects_path
@@ -41,7 +41,7 @@ feature "member views all tasks" do
     end
   end
 
-  context "member is not authenticated" do
+  context "member is not authenticated:" do
     scenario "member cannot view tasks" do
       sign_out(member)
       visit project_path(project)

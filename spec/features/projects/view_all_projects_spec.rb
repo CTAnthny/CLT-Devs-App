@@ -1,5 +1,5 @@
 
-feature "member views all projects" do
+feature "member views all projects:" do
   let(:member) { FactoryBot.create(:member) }
   before(:all) { 25.times { FactoryBot.create(:project) } }
   after(:all) { Project.delete_all }
@@ -14,7 +14,7 @@ feature "member views all projects" do
   # [X] - I must see projects listed in order, most recently updated first
   # [X] - I must be able to page view projects
 
-  context "member is authenticated" do
+  context "member is authenticated:" do
     before(:each) do
       sign_in(member)
       visit projects_path
@@ -42,7 +42,7 @@ feature "member views all projects" do
     end
   end
 
-  context "member is not authenticated" do
+  context "member is not authenticated:" do
     scenario "member cannot view projects" do
       sign_out(member)
       visit projects_path

@@ -1,5 +1,5 @@
 
-feature "member reviews item" do
+feature "member reviews item:" do
   let(:member) { FactoryBot.create(:member) }
   let!(:project) { FactoryBot.create(:project) }
 
@@ -15,7 +15,7 @@ feature "member reviews item" do
   #  [X] - I am presented with errors and the task is not created if I fill out the form incorrectly
   #  [X] - Member is redirected to project detail page after creation
 
-  context "member is authenticated" do
+  context "member is authenticated:" do
     before(:each) do
       sign_in(member)
       visit projects_path
@@ -45,7 +45,7 @@ feature "member reviews item" do
     end
   end
 
-  context "member is not authenticated" do
+  context "member is not authenticated:" do
     scenario "member cannot add a review" do
       sign_out(member)
       visit project_path(project)

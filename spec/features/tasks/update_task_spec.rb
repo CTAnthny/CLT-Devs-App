@@ -1,23 +1,21 @@
 
-feature "member updates task" do
+feature "member updates task:" do
   let(:member) { FactoryBot.create(:member) }
   let!(:project) { FactoryBot.create(:project_with_tasks, tasks_count: 1) }
   let!(:task) { project.tasks.first }
-  # The :project_with_tasks factory instantiates it's own Member for an associated task that must be referenced
-  # let!(:member) { Member.find(task.member_id) }
 
   # As an authenticated member
   # I want to update a task's details
   # So that I can correct errors or provide new information
   #
   # Acceptance Criteria:
-  #  [ ] - I must be signed in
-  #  [ ] - I can reach the task's edit page from the project details page
-  #  [ ] - I must be able to edit task details
-  #  [ ] - I must be presented with errors if I fill out the form incorrectly
-  #  [ ] - Upon successful update I am returned to the task show page
+  #  [X] - I must be signed in
+  #  [X] - I can reach the task's edit page from the project show page
+  #  [X] - I must be able to edit task details
+  #  [X] - I must be presented with errors if I fill out the form incorrectly
+  #  [X] - Upon successful update I am returned to the task show page
 
-  context "member is authenticated" do
+  context "member is authenticated:" do
     before(:each) do
       sign_in(member)
       visit projects_path
@@ -45,7 +43,7 @@ feature "member updates task" do
     end
   end
 
-  context "member is not authenticated" do
+  context "member is not authenticated:" do
     scenario "member cannot view tasks" do
       sign_out(member)
       visit edit_project_task_path(project, task)

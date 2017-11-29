@@ -1,5 +1,5 @@
 
-feature "member updates an project" do
+feature "member updates an project:" do
   let(:member) { FactoryBot.create(:member) }
   let!(:project) { FactoryBot.create(:project) }
 
@@ -15,7 +15,7 @@ feature "member updates an project" do
   # [X] - After editing I am notified and returned to the show page
   # [ ] - Unauthorized users are unable to edit project details
 
-  context "member is authenticated" do
+  context "member is authenticated:" do
     before(:each) do
       sign_in(member)
       visit projects_path
@@ -48,7 +48,7 @@ feature "member updates an project" do
     end
   end
 
-  context "member is not authenticated" do
+  context "member is not authenticated:" do
     scenario "member cannot update project" do
       sign_out(member)
       visit edit_project_path(project)

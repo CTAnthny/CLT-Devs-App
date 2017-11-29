@@ -1,5 +1,5 @@
 
-feature "member views the details of an item" do
+feature "member views the details of an item:" do
   let(:member) { FactoryBot.create(:member) }
   let!(:project) { FactoryBot.create(:project) }
 
@@ -18,7 +18,7 @@ feature "member views the details of an item" do
   # [ ] - I must be able to view a project's keywords and "desired" categories
   # [ ] - I am able to go back to the all projects index page
 
-  context "member is authenticated" do
+  context "member is authenticated:" do
     before(:each) do
       sign_in(member)
       visit projects_path
@@ -36,7 +36,7 @@ feature "member views the details of an item" do
     scenario "member views item rating and comments"
   end
 
-  context "member is not authenticated" do
+  context "member is not authenticated:" do
     scenario "member cannot view items" do
       sign_out(member)
       visit projects_path
