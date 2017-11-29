@@ -16,7 +16,7 @@
 </section>
 
 <section class="tasks-list">
-  <% if !@tasks.nil? %>
+  <% if @tasks.any? %>
     <header><h2>Tasks</h2></header>
     <% @tasks.each do |task| %>
       <section class="task"><hr />
