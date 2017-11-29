@@ -16,10 +16,11 @@
 </section>
 
 <section class="tasks-list">
+  <header><h2>Tasks</h2></header>
   <% @tasks.each do |task| %>
-    <section class="task">
+    <section class="task"><hr />
       <header class="task-header">
-        <dt><h2 class="task-name"><%= link_to task.name, [@project, task] %></h2></dt>
+        <dt><h3 class="task-name"><%= link_to task.name, [@project, task] %></h3></dt>
         <p class="task-details">
           <span class="upd_at">Last Updated: <%= task.updated_at.to_formatted_s(:long) %></span><br />
           <span class="task-members"></span>

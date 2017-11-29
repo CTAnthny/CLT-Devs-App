@@ -9,11 +9,11 @@ feature "member deletes task:" do
   # So that no one can view it
   #
   # Acceptance Criteria:
-  #  [ ] - I must be signed in
+  #  [X] - I must be signed in
   #  [ ] - I must be authorized
-  #  [ ] - I must be able delete a task from the task edit page
-  #  [ ] - I must be able delete a task from the task show page
-  #  [ ] - After deleting I am returned to the project show page
+  #  [X] - I must be able delete a task from the task edit page
+  #  [X] - I must be able delete a task from the task show page
+  #  [X] - After deleting I am returned to the project show page
 
   context "member is authenticated:" do
     before(:each) do

@@ -1,0 +1,95 @@
+$primary-color: #f7f7f7;
+$secondary-color: #e8e8e8;
+
+body.tasks {
+
+  padding: 0em 7.5em;
+
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover, &:active {
+      color: lighten(black, 37.5%);
+    }
+  }
+
+  h1, h2, h3 {
+    margin-top: 1.2em;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: $primary-color;
+    letter-spacing: 0.05em;
+  }
+
+  .form-style {
+    margin-top: 15%;
+    h2 {
+      color: #555;
+      letter-spacing: 0em;
+      margin: 0px 0px 20px 0px;
+    }
+  }
+
+  .task-form-links {
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    a {
+      color: $brand-primary;
+      &:hover, &:active {
+        color: $link-hover-color;
+      }
+    }
+    span.break {
+      color: #9f9f9f;
+      padding: 0px 3px;
+    }
+  }
+
+  .task {
+    padding-bottom: 2em;
+    img {
+      border-radius: 10px;
+      float: right;
+      margin-left: 1em;
+    }
+  }
+
+  .task-name {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .task-info {
+    color: $primary-color;
+    font-size: 1.75em;
+    line-height: 1.8em;
+    margin-top: -0.5em;
+    padding-left: .5em;
+  }
+
+  .task-details {
+    color: $secondary-color;
+    font-size: 90%;
+    margin: 0;
+    padding: 1.75em 2.75em;
+  }
+
+  .task-category {
+      margin: 0 0.1em;
+      padding: 0.3em 1em;
+      color: $primary-color;
+      background: #999;
+      font-size: 80%;
+  }
+      // .task-category-design {
+      //     background: #5aba59;
+      // }
+      // .task-category-pure {
+      //     background: #4d85d1;
+      // }
+      // .task-category-yui {
+      //     background: #8156a7;
+      // }
+      // .task-category-js {
+      //     background: #df2d4f;
+      // }
+}

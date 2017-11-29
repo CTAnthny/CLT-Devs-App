@@ -97,8 +97,14 @@ img {
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $dropdown-link-hover-color;
+    color: $dropdown-link-hover-color !important;
     background-color: transparent; //$dropdown-link-hover-bg default
+  }
+}
+
+ul.dropdown-menu {
+  a {
+    color: #333 !important;
   }
 }
 
@@ -267,12 +273,12 @@ textarea {
 
 .btn-default {
   color: white;
-  background-color: darken($brand-primary, 4%);
-  border-color: darken($brand-primary, 3%);
-  &:hover, &:active {
-    color: white;
+  background-color: darken($brand-primary, 2.5%);
+  border-color: lighten($brand-primary, 5%);
+  &:hover, &:active, &:focus, &:active:focus {
+    color: white !important;
     background-color: darken($brand-primary, 7.5%);
-    border-color: darken($brand-primary, 10%);
+    border-color: lighten($brand-primary, 5%);
   }
 }
 
