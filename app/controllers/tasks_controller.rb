@@ -1,18 +1,16 @@
 class TasksController < ApplicationController
   before_action :authenticate_member!
+  before_action :set_project
+  before_action :set_task, except: [:new, :create]
 
   def show
-    @project = Project.find(params[:project_id])
-    @task = Task.find(params[:id])
   end
 
   def new
-    @project = Project.find(params[:project_id])
     @task = Task.new(project_id: @project.id)
   end
 
   def create
-    @project = Project.find(params[:project_id])
     @task = Task.new(task_params)
     @task.project_id = @project.id
 
@@ -25,13 +23,9 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @project = Project.find(params[:project_id])
-    @task = Task.find(params[:id])
   end
 
   def update
-    @project = Project.find(params[:project_id])
-    @task = Task.find(params[:id])
 
     if @task.update_attributes(task_params)
       flash[:notice] = 'Your task has been successfully updated!'
@@ -42,8 +36,6 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @project = Project.find(params[:project_id])
-    @task = Task.find(params[:id])
     @task.destroy
     flash[:notice] = 'Your task has been successfully deleted!'
     redirect_to @project
@@ -53,5 +45,14 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:name, :description, :keywords, :needs)
+  end
+
+  def set_project
+    raise "Project Not Found" unless params[:project_id]
+    @project = Project.find(params[:project_id])
+  end
+
+  def set_task
+    @task = Task.find(params[:id])
   end
 end
