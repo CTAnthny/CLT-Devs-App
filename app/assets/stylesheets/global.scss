@@ -157,7 +157,8 @@ abbr[title] {
   font-family: "Open Sans", Arial, sans-serif;
   color: #777;
   padding: 30px;
-  margin-top: 10%;
+  // margin-top: 10%;
+  @include centerer;
 
   border-radius: 5px 5px 5px 5px;
   -moz-border-radius: 5px 5px 5px 5px;
@@ -352,50 +353,50 @@ text-align: center;
 /* RESPONSIVE STYLE */
 
 @media screen and (max-width: 320px) {
-  .form-style {
-    // padding: 30px;
-    margin-top: 40%;
-  }
+  // .form-style {
+  //   // padding: 30px;
+  //   margin-top: 40%;
+  // }
 }
 
 @media screen and (min-width: 320px) {
-  .form-style {
-    // padding: 30px;
-    margin-top: 35%;
-  }
+  // .form-style {
+  //   // padding: 30px;
+  //   margin-top: 35%;
+  // }
 }
 
 @media screen and (min-width: 480px) {
-  .form-style {
-    // padding: 30px;
-    margin-top: 27.5%;
-  }
+  // .form-style {
+  //   // padding: 30px;
+  //   margin-top: 27.5%;
+  // }
 }
 
 @media screen and (min-width: 768px) {
-  .form-style {
-    padding: 15px;
-    margin-top: 19%;
-  }
+  // .form-style {
+  //   padding: 15px;
+  //   margin-top: 19%;
+  // }
 }
 
 @media screen and (min-width: 1224px) {
-  .form-style {
-    // padding: 15px;
-    margin-top: 10%;
-  }
+  // .form-style {
+  //   // padding: 15px;
+  //   margin-top: 10%;
+  // }
 }
 
 @media screen and (min-width: 1650px) {
-  .form-style {
-    // padding: 15px;
-    margin-top: 8.5%;
-  }
+  // .form-style {
+  //   // padding: 15px;
+  //   margin-top: 8.5%;
+  // }
 }
 
 @media screen and (min-width: 1850px) {
-  .form-style {
-    // padding: 15px;
-    margin-top: 7.5%;
-  }
+  // .form-style {
+  //   // padding: 15px;
+  //   margin-top: 7.5%;
+  // }
 }
