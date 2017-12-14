@@ -33,7 +33,8 @@ feature "member views the details of an item:" do
       expect(page).to have_content("Last Updated: #{project.updated_at.to_formatted_s(:long)}")
     end
 
-    scenario "member views item rating and comments"
+    scenario "member views current members working on the project"
+
   end
 
   context "member is not authenticated:" do

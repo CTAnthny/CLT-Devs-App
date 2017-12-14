@@ -1,5 +1,5 @@
 
-feature "member deletes an project:" do
+feature "member deletes a project:" do
   let!(:member) { FactoryBot.create(:member) }
   let!(:project) { FactoryBot.create(:project) }
 

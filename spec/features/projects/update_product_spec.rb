@@ -1,5 +1,5 @@
 
-feature "member updates an project:" do
+feature "member updates a project:" do
   let(:member) { FactoryBot.create(:member) }
   let!(:project) { FactoryBot.create(:project) }
 
