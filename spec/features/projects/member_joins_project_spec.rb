@@ -21,6 +21,7 @@ feature "member joins project:" do
     end
 
     scenario "member successfully joins project" do
+      save_and_open_page
       click_link "Join Project"
       expect(page).to have_content("You have successfully joined the #{project.name} project!")
       expect(page).to have_current_path(project_path(project))

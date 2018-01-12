@@ -6,6 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @member = current_member
     @project = Project.find(params[:id])
     @tasks = @project.tasks.order(updated_at: :desc).page(params[:page])
   end
@@ -40,6 +41,16 @@ class ProjectsController < ApplicationController
       redirect_to @project
     else
       render 'edit'
+    end
+  end
+
+  def join
+    @member = current_member
+    @project = Project.find(params[:id])
+
+    if @project.members << @member
+      flash[:notice] = 'You have successfully joined the project!'
+      redirect_to @project
     end
   end
 

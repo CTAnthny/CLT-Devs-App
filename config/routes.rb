@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   root to: 'main_pages#home'
 
   resources :projects do
+    member do
+      get 'join'
+      put 'join'
+      patch 'join'
+    end
     resources :tasks
   end
 end
