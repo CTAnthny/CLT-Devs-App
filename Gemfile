@@ -12,6 +12,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'rails', '~> 5.1.2'
 gem 'uglifier', '>= 1.3.0'
+gem 'acts-as-taggable-on', '~> 5.0'
 
 group :development do
   gem 'guard-livereload', '~> 2.5', require: false
