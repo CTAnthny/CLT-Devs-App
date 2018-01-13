@@ -1,13 +1,13 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_member!
+  before_action :set_member, only: [:show, :create, :join]
+  before_action :set_project, except: [:index, :new, :create]
 
   def index
     @projects = Project.all.order(updated_at: :desc).page(params[:page])
   end
 
   def show
-    @member = current_member
-    @project = Project.find(params[:id])
     @tasks = @project.tasks.order(updated_at: :desc).page(params[:page])
   end
 
@@ -16,7 +16,6 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @member = current_member
     @project = Project.new(project_params)
     @project.creator_id = @member.id
 
@@ -30,12 +29,9 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    @project = Project.find(params[:id])
   end
 
   def update
-    @project = Project.find(params[:id])
-
     if @project.update_attributes(project_params)
       flash[:notice] = 'Your project has been successfully updated!'
       redirect_to @project
@@ -45,9 +41,6 @@ class ProjectsController < ApplicationController
   end
 
   def join
-    @member = current_member
-    @project = Project.find(params[:id])
-
     if @project.members << @member
       flash[:notice] = 'You have successfully joined the project!'
       redirect_to @project
@@ -55,7 +48,6 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project = Project.find(params[:id])
     @project.project_memberships.clear
     @project.destroy
     flash[:notice] = 'Your project has been successfully deleted!'
@@ -66,5 +58,13 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(:name, :description)
+  end
+
+  def set_member
+    @member = current_member
+  end
+
+  def set_project
+    @project = Project.find(params[:id])
   end
 end
