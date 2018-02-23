@@ -1,5 +1,6 @@
 class Member < ApplicationRecord
-  acts-as-taggable-on :skills, :interests
+  acts_as_taggable_on :skills, :interests
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
