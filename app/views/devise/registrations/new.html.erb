@@ -6,10 +6,10 @@
     <%= f.input :first_name, label: 'First Name', required: true, autofocus: true %>
     <%= f.input :last_name, label: 'Last Name', required: true %>
     <%= f.input :email, label: 'Email', required: true, autofocus: true %>
-    <%= f.input :skill_list, label: 'Skills', input_html: { value: f.object.skill_list.to_s } %>
-    <%= f.input :interest_list, label: 'Interests', input_html: { value: f.object.interest_list.to_s } %>
+    <%= f.input :skill_list, label: 'Skills', placeholder: "Separate with commas", input_html: { value: f.object.skill_list.to_s } %>
+    <%= f.input :interest_list, label: 'Interests', placeholder: "Separate with commas", input_html: { value: f.object.interest_list.to_s } %>
 
-    <%= f.input :password, label: 'Password', required: true, hint: ("#{@minimum_password_length} Characters Minimum" if @minimum_password_length) %>
+    <%= f.input :password, label: 'Password', required: true, placeholder: ("#{@minimum_password_length} Characters Minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, label: 'Password Confirmation', required: true %>
   </div>
 
