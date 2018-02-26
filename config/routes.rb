@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :members
+  devise_for :members, controllers: { registrations: 'members/registrations' }
 
   unauthenticated do
     as :member do
